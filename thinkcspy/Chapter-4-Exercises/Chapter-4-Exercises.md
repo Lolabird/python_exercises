@@ -13,7 +13,7 @@ _Assume you have a list of numbers_ `12, 10, 32, 3, 66, 17, 42, 99, 20`
 
 This one had a visual counterpart, but that would require me including a video which is something I'm simply not keen on doing, right now. So here are some text and numbers instead.
 
-```text-x-
+```text-x-python
 # Runestone.Academy thinkcspy course
 # Chapter 4
 # Problem 4

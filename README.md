@@ -9,7 +9,7 @@ I'm currently starting at the very beginning with *How to Think Like Computer Sc
 
 thinkcspy has a bunch of exercises at the end of each chapter that I will be uploading in its corresponding folder. ~~For now, I will just post the questions and my solutions in markdown. Currently doing exercises in sandboxes in the book so I don't know how to actually compile Python, yet.~~
 
-I found out that it's really easy to just execute Python in the terminal. I will still put the exercises in Markdown along with their results but will now include each exercise in its own file as well. Mainly to get those Python points from GitHub lol.
+I found out that it's really easy to just execute Python in the terminal. I will still put the exercises in Markdown along with their results but will now include each exercise in its own file as well. I want to get those Python points from GitHub lol.
 
 I also won't be posting solutions to every single exercise - only the ones I found to be interesting - mainly the ones I had to think up solutions for myself. 
 
