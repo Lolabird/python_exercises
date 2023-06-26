@@ -192,9 +192,9 @@ Used what I learned from problem 9 on this one. Even took the time to figure out
 ```text-x-python
 # Runestone.Academy thinkcspy course
 # Chapter 4
-# Problem 10
+# Problem 11
 
- import turtle
+import turtle
 wn = turtle.Screen()
 
 wn.bgcolor("black")
