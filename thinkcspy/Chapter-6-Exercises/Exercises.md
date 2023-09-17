@@ -434,7 +434,7 @@ Problem 14
 
 > Write a function called `mySqrt` that will approximate the square root of a number, call it n, by using Newton’s algorithm. Newton’s approach is an iterative guessing algorithm where the initial guess is n/2 and each subsequent guess is computed using the formula: newguess = (1/2) \* (oldguess + (n/oldguess)).
 
-I'm adding this one here, because it took me a minute to figure out the most efficient way to compute. this. At first I had a a for loop, but that was taking way too many steps for the program to get to the right answer. Then I did a for loop with a break and that was better, but that was still taking the program too many steps. 
+I'm adding this one here, because it took me a minute to figure out the most efficient way to compute. this. At first I had a for loop, but that was taking way too many steps for the program to get to the right answer. Then I did a for loop with a break and that was better, but that was still taking the program too many steps. 
 
 Finally, I realized that I could just create this program with a while loop and that drastically reduced the amount of steps the program had to go through. It still seems to be going through a few too any checks, but I think it's okay for my current skill level. Plus, it passed all the built in checks!
 
@@ -584,7 +584,7 @@ And I did this:
 
 Technically, I did _solve_ the problem but was tired and didn't feel like dealing with the little line that appeared as a result of combing `write` and `fill` within the same function. But then we got this problem in the exercises lol and they specifically mentioned the “trickiness” of being able to write the data and fill the bars at the same time. Presumably because of that little extra line. 
 
-So this time I actually did deal with the little line. Created a second turtle, `alex`, and a separate function `writeData`, for the `alex` to write with. Also changed the colors, because what even is that red blue green color combo? 
+So this time I actually did deal with the little line. Created a second turtle, `alex`, and a separate function `writeData`, for `alex` to write with. Also changed the colors, because what even is that red blue green color combo? 
 
 Anyway, here is the code:
 
