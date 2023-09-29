@@ -364,7 +364,9 @@ wn.exitonclick()
 
 Result:
 
-I started after the turtles already got moving, but you get the idea. 
+I started recording after the turtles already got moving, but you get the idea. 
+
+![](Exercises/turtlemoves-2023-09-29_11.47.3.gif)
 
 Image problems
 --------------
