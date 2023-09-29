@@ -25,6 +25,10 @@ So that's when `bound` was created. Problem was, I initialized it to the value o
 That was a pretty fun problem! Alright, now to the solution:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 2
+
 def print_triangular_numbers(n):
     # your code here
     i = 1
@@ -61,6 +65,10 @@ Now the real struggle was working with primes larger than 2. Turns out that solu
 But then we get back to the whole “taking too many steps thing”. I did more research and learned that taking the square root of `n` and making that the limit for the while loop would help the program execute a lot faster than testing if x was greater than. Then I reinitialized x to 3, incremented it by 2 instead of decrementing it by 2 and wallah! I had a program that was decently efficient and effective and it passed all the built in tests!
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 3
+
 import math
 
 def is_prime(n):
@@ -105,6 +113,10 @@ I'm combining problems 4 through 6 because they build on each other.
 ### Initial code from an earlier lesson section:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Section 4 
+
 import random
 import turtle
 
@@ -143,9 +155,13 @@ wn.exitonclick()
 
 ### My Code
 
-Oh boy.. this one was a lot. Problem 4 was pretty easy. All I had to do was have them go at a random angle. That initial code looked like this:
+Oh boy.. this section was a lot. Problem 4 was pretty easy, though. All I had to do was have them go at a random angle. That initial code looked like this:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 4
+
 import random
 import turtle
 
@@ -185,6 +201,10 @@ wn.exitonclick()
 The random starting position proved to be more challenging. The calculations were all fine from the getgo. The issue was I forgot bring the pen up before I moved the turtles to a random location. I ended up moving on to the image problems before coming back to this and realizing that lol. Here's the code for that:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 5
+
 import random
 import turtle
 
@@ -273,6 +293,10 @@ I also changed the angle from `180` to `170` and that seemed to keep the turtles
 Here's the final code:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 6
+
 import random
 import turtle
 import math
@@ -376,6 +400,10 @@ The following problems used the following image and code (from an earlier lesson
 ![](Exercises/LutherBellPic.jpg)
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Section 11 
+
 import image
 
 img = image.Image("luther.jpg")
@@ -406,6 +434,10 @@ win.exitonclick()
 This was my initial solution. 
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 8
+
 import image
 
 img = image.Image("luther.jpg")
@@ -433,11 +465,15 @@ And the result:
 
 ![](Exercises/3_image.png)
 
-But then I had to figure out turning That into a function. I was going to go the lazy route and leave it as it was since it gave me the solution I was looking for, but then I figured actually turning this into a function would help me with the next problem. 
+But then I had to figure out turning that into a function. I was going to go the lazy route and leave it as it was since it gave me the solution I was looking for, but then I figured actually turning this into a function would help me with the next problem. 
 
 Here was my final solution with the function:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 8
+
 import image
 
 def greyScale (red, blue, green):    
@@ -475,6 +511,10 @@ And the result, of course, is the same:
 This was my initial solution:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 9
+
 import image
 
 img = image.Image("luther.jpg")
@@ -511,6 +551,10 @@ The result was:
 Close, but not quite. I needed black and white, not high contrast. But my intuition was in the ballpark. I figured that this would work better if I actually took the solution I got from the grey scale problem and then turned _that_ black and white. So, I went back to Problem 8, turned my solution into a function and then fixed up the code for this problem like this:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 9
+
 import image
 
 def greyScale (red, blue, green):
@@ -560,6 +604,10 @@ win.exitonclick()
 This didn't take too much effort since they gave me the formula. Just sharing, because I think it's cool.
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 10
+
 import image
 
 
