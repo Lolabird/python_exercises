@@ -112,6 +112,10 @@ Result with an input of 25:
 With the above script as a reference, this is how I revised my solution for problem 3:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 8
+# Problem 3
+
 def is_prime(n):
     # your code 
         
