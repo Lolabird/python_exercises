@@ -17,6 +17,10 @@ Problem 3
 I'm including this one because I think the command chaining necessary for part g is cool.
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 3
+
 myList = [76, 92.3, 'hello', True, 4, 76]
 
 # Your code here
@@ -47,6 +51,10 @@ Problem 11
 Up until now, the problems had been rather straightforward, but this one presented an interesting challenge. My first attempt included a while loop:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 11
+
 def sumUntilEven(lst):
     # your code here
     sumlist = 0
@@ -65,6 +73,10 @@ print(sumUntilEven(mylist))
 But then I realized that this created an infinite loop because I provided no way to exit  `while` loop. Then I tried this:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 11
+
 def sumUntilEven(lst):
     # your code here
     sumlist = 0
@@ -83,6 +95,10 @@ print(sumUntilEven(mylist))
 My test worked, but I failed one of the built in tests, which was a list of _only_ odd numbers. And this was because I provided no return value for cases where the list contained only odd numbers. Once I added another return value, it was smooth sailing from there. Here's the final code and its results:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 11
+
 def sumUntilEven(lst):
     # your code here
     sumlist = 0
@@ -114,6 +130,10 @@ Problem 12
 I'm including this simply because I thought it was an interesting problem.
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 12
+
 def count(lst):
     # your code here
     wordCount = 0
@@ -151,6 +171,10 @@ Problem 13
 This one was fun. The more challenging ones to think about were `index` and `in`. I take those for granted when I'm coding and as you can probably tell, I use `in` _a lot_ when I'm doing something that requires traversing through a list of items. 
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 13
+
 def count(lst):
     count = 0
     
@@ -237,6 +261,10 @@ Problem 14
 Okay… this one was a challenge. Here was the first iteration of my code:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 14
+
 def replace(s, old, new):
     # your code here
         
@@ -265,6 +293,10 @@ The error that was produced as a result of not initializing `newStr` wasn't actu
 This reminded me of the letter problems from the previous chapter, so I referenced those to figure out how I could replace any number of characters. This is what I came up with:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 14
+
 def replace(s, old, new):
     # your code here
     
@@ -300,6 +332,10 @@ One step forward, two steps backward. The first test still worked, and the secon
 Lawl… I really overcomplicated this. 🤦🏿‍♀️ Here is the final code:
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 14
+
 def replace(s, old, new):
     # your code here
     newStr = s.split(old)
@@ -340,6 +376,10 @@ Like last chapter, I really didn't have to change much. I just took existing cod
 I did this one in my terminal though, because the book I'm using can only run so much. Anyway, here's the code and the result. And again, I'm leaving out the stuff that got pritned to the terminal, because it's just a long list of repeating numbers and letters. The image is more interesting. 
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 15
+
 import turtle
 
 def createLSystem(numIters,axiom):
@@ -421,6 +461,10 @@ main()
 Same deal as problem 15 but prettier.
 
 ```text-x-python
+# Runestone.Academy thinkcspy course
+# Chapter 10
+# Problem 16
+
 import turtle
 
 def createLSystem(numIters,axiom):
