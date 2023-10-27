@@ -401,7 +401,7 @@ Drawing the image was relatively straightforward. It was getting the world coord
 
 The challenge was that this time, just splitting the data into x and y coordinates was not that simple. I now had to contend with strings `“UP”` and `“DOWN”`, as well. 
 
-What also threw me for a loop was that the program was expecting me to initialize the min/max variables before what I thought of as the actual initialization (assigning the variables to the first numbers in the file). My guess is that I had to go through this extra step, because unlike in the previous problem, I was pulling the numbers directly from the file insteadAnd  an array. 
+What also threw me for a loop was that the program was expecting me to initialize the min/max variables before what I thought of as the actual initialization (assigning the variables to the first numbers in the file). My guess is that I had to go through this extra step, because unlike in the previous problem, I was pulling the numbers directly from the file instead of an array. 
 
 Anywho, here's my solution:
 
