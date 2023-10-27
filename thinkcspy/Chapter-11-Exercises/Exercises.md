@@ -1,7 +1,7 @@
 # Exercises
 This lesson only had five problems, and thank goodness for that, because problem 4 really threw me for a loop. I've included all 5 here, because there are so few problems and because I genuinely found them all to be interesting problems. 
 
-Also I kept getting tripped up with how I interpreted the numbers from the files vs how Python interpreted them. Because they were coming from a file, those numbers were interpreted as strings, not numbers. You'd think that after my first encounter with this, I'd understand that, but I was literally still struggling with that on problem 5 lol. 
+Also, I kept getting tripped up with how I interpreted the numbers from the files vs how Python interpreted them. Because they were coming from a file, those numbers were interpreted as strings, not numbers. You'd think that after my first encounter with this, I'd understand that, but I was literally still struggling with that on problem 5 lol. 
 
 Anyway, enough talk. Let's go through the exercises. 
 
@@ -395,7 +395,7 @@ Problem 5
 
 > At the bottom of this page is a very long file called `mystery.txt` The lines of this file contain either the word UP or DOWN or a pair of numbers. UP and DOWN are instructions for a turtle to lift up or put down its tail. The pairs of numbers are some x,y coordinates. Write a program that reads the file `mystery.txt` and uses the turtle to draw the picture described by the commands and the set of points.
 
-It's long so, I'll just link to the data in `mystery.txt` [here](Exercises/mystery.txt.md). 
+It's long, so I'll just link to the data in `mystery.txt` [here](Exercises/mystery.txt.md). 
 
 Drawing the image was relatively straightforward. It was getting the world coordinates that was challenging, even though I literally just did the same thing in the previous problem. 
 
@@ -410,7 +410,7 @@ Anywho, here's my solution:
 # Chapter 11
 # Problem 5
 
- import turtle
+import turtle
 
 def getMinMax():
     #get world coordinates
