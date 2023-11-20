@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Problem 5
+
 def translator(english):
 
     pirate = {}

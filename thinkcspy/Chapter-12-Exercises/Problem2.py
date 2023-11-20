@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Problem 2
+
 def add_fruit(inventory, fruit, quantity=0):
     
     if fruit not in inventory:

@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Problem 3 
+
 aliceBook = open("alice_in_wonderland.txt", "r")
 aliceDict = {}
 outfile = open("alice_words.txt", "w")

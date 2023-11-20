@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Lab 1
+ 
 def countAll(text):
     wordDict = {}
     

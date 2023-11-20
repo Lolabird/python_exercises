@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Lab 2
+ 
 import turtle
 
 def countAll(text):

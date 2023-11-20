@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 12
+# Problem 1
+
 def countAll(text):
     wordDict = {}
     text = text.lower()
