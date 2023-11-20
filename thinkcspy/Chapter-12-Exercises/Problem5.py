@@ -25,10 +25,14 @@ def translator(english):
         word = englishList[i]
         word = word.lower()
         newWord = ""
+        lengthy = len(newWord) - 1
 
         for char in word:
             if char.isalpha():
                 newWord += char
+                
+        if newWord[lengthy] == 's':
+            newWord = newWord[0:lengthy]
 
         if newWord in pirate:
             englishList[i] = pirate[newWord]
