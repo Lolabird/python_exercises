@@ -41,11 +41,11 @@ def translator(english):
                 if word[lengthier] == 's' or word[lengthiest] == 's':
                     englishList[i] = pirate[newWord] + 's'
 
-                    if not word[lengthiest].isalpha():
-                        englishList[i] = pirate[newWord] + word[lengthiest]
+                    if not word[lengthier].isalpha():
+                        englishList[i] = pirate[newWord] + 's' + word[lengthier]
 
-                elif not word[lengthiest].isalpha():
-                    englishList[i] = pirate[newWord] + word[lengthiest]
+                elif not word[lengthier].isalpha():
+                    englishList[i] = pirate[newWord] + word[lengthier]
             else:        
                 englishList[i] = pirate[newWord]
                 
