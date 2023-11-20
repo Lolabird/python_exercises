@@ -19,13 +19,15 @@ def translator(english):
     pirate['is'] = 'be'
     pirate['man'] = 'matey'
     
-    englishList = english.split() + [" "]
+    englishList = english.split() + [' ']
     
     for i in range(len(englishList) - 1):
         word = englishList[i]
         word = word.lower()
         newWord = ""
         lengthy = len(newWord) - 1
+        lengthier = len(word) - 1
+        lengthiest = len(word) - 2
 
         for char in word:
             if char.isalpha():
@@ -35,7 +37,18 @@ def translator(english):
             newWord = newWord[0:lengthy]
 
         if newWord in pirate:
-            englishList[i] = pirate[newWord]
+            if newWord != word:
+                if word[lengthier] == 's' or word[lengthiest] == 's':
+                    englishList[i] = pirate[newWord] + 's'
+
+                    if not word[lengthiest].isalpha():
+                        englishList[i] = pirate[newWord] + word[lengthiest]
+
+                elif not word[lengthiest].isalpha():
+                    englishList[i] = pirate[newWord] + word[lengthiest]
+            else:        
+                englishList[i] = pirate[newWord]
+                
 
     translation = " ".join(englishList)
         
