@@ -32,7 +32,7 @@ def stackTowers(num):
 def createRods(t):
     for i in range(3):
         t.penup()
-        t.goto(100*i, 100)
+        t.goto(300*i-200, 100)
         t.pendown()
         t.right(90)
         t.forward(200)
@@ -53,9 +53,10 @@ def createTurtles(num):
     for i in range(num):
         newTurt = turtle.Turtle()
         newTurt.shape("square")
-        newTurt.shapesize((i+1)/2, (i+1)*2, 1)
+        newTurt.shapesize((i+1)*(1/5), (i+1)*2, 1)
         newTurt.color(generateColor())
-        newTurt.goto(0, i*-15)
+        newTurt.penup()
+        newTurt.goto(-200, i*-15)
         turtles.append(newTurt)
 
     return(turtle)
@@ -68,11 +69,13 @@ def main():
     num = 7
     tRod = turtle.Turtle()
     tRod.pensize(5)
-    turts = createTurtles(num)
     wn = turtle.Screen()
 
     createRods(tRod)
     stackTowers(num)
+
+    turts = createTurtles(num)
+
 
     wn.exitonclick()
 
