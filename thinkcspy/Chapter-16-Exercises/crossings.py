@@ -1,4 +1,4 @@
-def cross(bank1, boat, bank2):
+def cross(rounds, bank1, boat, bank2):
     if bank1["Missionaries"] + bank1["Cannibals"] == 0 and boat["Missionaries"] + boat["Cannibals"] == 0:
         return "Journey complete"
     
@@ -6,11 +6,11 @@ def cross(bank1, boat, bank2):
         if bank1["Missionaries"] - 1 >= bank1["Cannibals"]:
             bank1["Missionaries"] -= 1 
             boat["Missionaries"] += 1
-            print(bank1, boat, bank2)
+            print(rounds, bank1, boat, bank2)
         elif bank1["Cannibals"] > 0:
             bank1["Cannibals"] -= 1
             boat["Cannibals"] += 1
-            print(bank1, boat, bank2)
+            print(rounds, bank1, boat, bank2)
         
     else:
         if boat["Cannibals"] >= 1 and bank2["Missionaries"] >= bank2["Cannibals"] + 1:
@@ -19,9 +19,10 @@ def cross(bank1, boat, bank2):
         elif boat["Missionaries"] >= 1:
              bank2["Missionaries"] += 1 
              boat["Missionaries"] -= 1
-        print(bank1, boat, bank2)
+        print(rounds, bank1, boat, bank2)
+        rounds += 1
 
-    cross(bank1, boat, bank2)
+    cross(rounds, bank1, boat, bank2)
          
 
 def main():
@@ -29,6 +30,6 @@ def main():
     bank2 = {"name": "B2", "Missionaries": 0, "Cannibals": 0}
     boat = {"name": "boat", "Missionaries": 0, "Cannibals": 0}
 
-    return cross(bank1, boat, bank2)
+    return cross(1, bank1, boat, bank2)
 
 print(main())
