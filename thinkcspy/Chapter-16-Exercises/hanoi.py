@@ -1,3 +1,6 @@
+import turtle
+import random
+
 def stackTowers(num): 
     A = []
     B = []
@@ -25,4 +28,52 @@ def stackTowers(num):
    
     hanoi(num, A, B, C) 
 
-stackTowers(5)
+
+def createRods(t):
+    for i in range(3):
+        t.penup()
+        t.goto(100*i, 100)
+        t.pendown()
+        t.right(90)
+        t.forward(200)
+        t.left(90)
+
+def generateColor():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+
+    hexColor = "#{:02X}{:02X}{:02X}".format(r, g, b)
+    return hexColor
+
+
+def createTurtles(num):
+    turtles = []
+
+    for i in range(num):
+        newTurt = turtle.Turtle()
+        newTurt.shape("square")
+        newTurt.shapesize((i+1)/2, (i+1)*2, 1)
+        newTurt.color(generateColor())
+        newTurt.goto(0, i*-15)
+        turtles.append(newTurt)
+
+    return(turtle)
+
+def moveTurtles():
+    pass
+
+
+def main():
+    num = 7
+    tRod = turtle.Turtle()
+    tRod.pensize(5)
+    turts = createTurtles(num)
+    wn = turtle.Screen()
+
+    createRods(tRod)
+    stackTowers(num)
+
+    wn.exitonclick()
+
+main()
