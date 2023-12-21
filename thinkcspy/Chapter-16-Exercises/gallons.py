@@ -1,10 +1,3 @@
-def setState():
-    jugA = {"name": "Jug A", "state": 0, "cap": 4}
-    jugB = {"name": "Jug B", "state": 0, "cap": 3}
-    target = 2
-
-    return fillJug(1, jugA, jugB, target)
-
 
 def fillJug(rounds, jugA, jugB, target):
     pour = 0
@@ -34,4 +27,12 @@ def fillJug(rounds, jugA, jugB, target):
         fillJug(rounds + 1, jugA, jugB, target)
 
 
-setState()
+def main():
+    jugA = {"name": "Jug A", "state": 0, "cap": 4}
+    jugB = {"name": "Jug B", "state": 0, "cap": 3}
+    target = 2
+
+    return fillJug(1, jugA, jugB, target)
+
+
+main()
