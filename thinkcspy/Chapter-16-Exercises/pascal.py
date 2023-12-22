@@ -12,7 +12,7 @@ def pascal(row):
             if i == 0:
                 continue
             else:
-                print((" "*(row-i)) + (f"{num} "*i) + (" "*(row-i)))
+                print(("  "*(row-i)) + (f"  {num} "*i) + (" "*(row-i)))
     
 
 pascal(8)
