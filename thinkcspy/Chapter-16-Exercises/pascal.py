@@ -15,7 +15,7 @@ def createRow(currentRow):
         coefficient = getbinomial(currentRow, i)
         row.append(coefficient)
 
-    result = " ".join(map(str, row))
+    result = "  ".join(map(str, row))
 
     return result
 
@@ -36,6 +36,6 @@ def factorial(number):
         
 
 
-createTriange(5)
+createTriange(10)
 
 
