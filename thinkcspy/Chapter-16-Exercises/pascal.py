@@ -1,26 +1,41 @@
-def pascal(row):
-    num = 0
-
-    if row < 0:
+def createTriange(numRows):
+    if numRows < 0:
         return
     else:     
-        for i in range(row+1):
-            spaces = ("  "*(row-i)) 
-            nums = f"{getbinomial(num, i)} "
+        for i in range(numRows+1):
+            spaces = ("  "*(numRows-i)) 
+            nums = f"{createRow(i)}"
             print(spaces + nums + spaces)
 
-    # if row == 0 or 1: num = 1
-    # the first and last instance of i always == 1
-    #elif row % 2 == 0:
-    #   increase until the middle number then decrease
-    #elif row % 2 == 1:
-    #   increase until the halfway point, then decrease
+
+def createRow(currentRow):
+    row = []
+
+    for i in range(currentRow + 1):
+        coefficient = getbinomial(currentRow, i)
+        row.append(coefficient)
+
+    result = " ".join(map(str, row))
+
+    return result
+
+def getbinomial(n, k):
+    numerator = factorial(n)
+    denominator = factorial(k) * factorial(n - k)
+    return numerator // denominator
 
 
-def getbinomial(num, iters):
-   
-   return f"{num+iters}   " * iters
+def factorial(number):
+    if number < 0:
+        return
+    elif number > 1:
+        number *= factorial(number - 1)
+        return number
+    else:
+        return 1
+        
 
-pascal(8)
+
+createTriange(5)
 
 
