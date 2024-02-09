@@ -22,10 +22,30 @@ class Point:
         dy = self.y - pnt.getY()
         
         return math.sqrt(dx**2 +dy**2)
+    
+    def reflect_x(self):
+        return "(" + str(self.x) + ", " + str(-self.y) + ")"
+    
+    def slopeFromOrigin(self):
+        return self.y / self.x
+    
+    def slopeIntercept(self, pnt):
+        dx = self.x - pnt.getX()
+        dy = self.y - pnt.getY()
+        m = dy / dx
+        b = self.y - m*self.x
+        
+        return "(" + str(m) + ", " + str(b) + ")"
+    
+    def move(self, pnt):
+        self.x += pnt.getX()
+        self.y += pnt.getY()
+        
+        return "(" + str(self.x) + ", " + str(self.y) + ")"
 
     def __str__(self):
         return "x=" + str(self.x) + ", y=" + str(self.y)
 
 p = Point(7, 6)
 q = Point(10, 3)
-print(p.distanceFromPoint(q))
+print(p.move(q))
