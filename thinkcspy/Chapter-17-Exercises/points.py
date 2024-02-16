@@ -32,6 +32,14 @@ class Point:
     def slopeIntercept(self, pnt):
         dx = self.x - pnt.getX()
         dy = self.y - pnt.getY()
+
+        # Accounting for points of failure (divide by 0)
+        if dx == 0:
+            if dy == 0:
+                return "Cannot calculate slope of a single point."
+            else:
+                return "Cannot calculate slope of a vertical line."
+
         m = dy / dx
         b = self.y - m*self.x
         
