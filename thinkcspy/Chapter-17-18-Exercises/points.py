@@ -77,7 +77,7 @@ class Point:
     def __str__(self):
         return "x=" + str(self.x) + ", y=" + str(self.y)
 
-p = Point(7, 6)
-q = Point(10, 3)
-z = Point(8, 5)
-print(p.findCenterRadius(q, z))
+# p = Point(7, 6)
+# q = Point(10, 3)
+# z = Point(8, 5)
+# print(p.findCenterRadius(q, z))
