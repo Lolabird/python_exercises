@@ -36,15 +36,38 @@ class Point:
         # Accounting for points of failure (divide by 0)
         if dx == 0:
             if dy == 0:
-                return "Cannot calculate slope of a single point."
+                return "Error: Cannot calculate slope of a single point."
             else:
-                return "Cannot calculate slope of a vertical line."
+                return "Error: Cannot calculate slope of a vertical line."
         
         m = dy / dx
         b = self.y - m*self.x
         
         return (m, b)
     
+    def getMid(self, pnt):
+        midX = (self.x + pnt.getX()) / 2
+        midY = (self.y + pnt.getY()) / 2
+        
+        return (midX, midY) 
+    
+    def findCenterRadius(self, pnt1, pnt2):
+        # Find a way to figure out if all three points are on the same line probably
+        # Comparing slopeIntercept return values
+        m1, b1 = self.slopeIntercept(pnt1)
+        m2, b2 = self.slopeIntercept(pnt2)
+        
+        if m1 == m2 and b1 == b2:
+            return "Error: Points are on the same line."
+        
+        mid1X, mid1Y = self.getMid(pnt1)
+        mid2X, mid2Y = self.getMid(pnt2)
+        center = Point(mid1X, mid1Y).getMid(Point(mid2X, mid2Y))
+        
+        r = self.distanceFromPoint(Point(center[0], center[1]))
+        
+        return "Circumcenter: {}; Radius: {}".format(center, r)
+        
     def move(self, pnt):
         self.x += pnt.getX()
         self.y += pnt.getY()
@@ -56,4 +79,5 @@ class Point:
 
 p = Point(7, 6)
 q = Point(10, 3)
-print(p.move(q))
+z = Point(8, 5)
+print(p.findCenterRadius(q, z))
