@@ -21,10 +21,10 @@ class Point:
         dx = self.x - pnt.getX()
         dy = self.y - pnt.getY()
         
-        return math.sqrt(dx**2 +dy**2)
+        return math.sqrt(dx**2 + dy**2)
     
     def reflect_x(self):
-        return "(" + str(self.x) + ", " + str(-self.y) + ")"
+        return (self.x, -self.y)
     
     def slopeFromOrigin(self):
         return self.y / self.x
@@ -32,24 +32,24 @@ class Point:
     def slopeIntercept(self, pnt):
         dx = self.x - pnt.getX()
         dy = self.y - pnt.getY()
-
+        
         # Accounting for points of failure (divide by 0)
         if dx == 0:
             if dy == 0:
                 return "Cannot calculate slope of a single point."
             else:
                 return "Cannot calculate slope of a vertical line."
-
+        
         m = dy / dx
         b = self.y - m*self.x
         
-        return "(" + str(m) + ", " + str(b) + ")"
+        return (m, b)
     
     def move(self, pnt):
         self.x += pnt.getX()
         self.y += pnt.getY()
         
-        return "(" + str(self.x) + ", " + str(self.y) + ")"
+        return (self.x, self.y)
 
     def __str__(self):
         return "x=" + str(self.x) + ", y=" + str(self.y)
