@@ -27,9 +27,32 @@ class Rectangle:
         self.height = width
 
         return self
+    
+    def contains(self, pnt):
+        lowerX = self.pos.getX()
+        upperX = lowerX + self.width
+        lowerY = self.pos.getY()
+        upperY = lowerY + self.height
+        pntX = pnt.getX()
+        pntY = pnt.getY()
 
+        if lowerX == upperX or lowerY == upperY:
+            return "Error: Rectangle not defined."
+
+        if lowerX > upperX:
+            lowerX = upperX
+            upperX = self.pos.getX()
+
+        if lowerY > upperY:
+            lowerY = upperY
+            upperY = self.pos.getY()
+
+        if pntX > lowerX and pntX < upperX and pntY > lowerY and pntY < upperY:
+            return True
+
+        return False
 
 r = Rectangle(Point(0, 0), 10, 5)
-print(r)
-print(r.transpose())
+#print(r)
+print(r.contains(Point(-9, .0001)))
     
