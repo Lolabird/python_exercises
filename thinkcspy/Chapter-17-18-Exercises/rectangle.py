@@ -58,27 +58,20 @@ class Rectangle:
 def collission(r1, r2):
     conditionW = False
     conditionH = False
-    bigR = r1
-    lilR = r2
-
-    if r1.area() < r2.area():
-        bigR = r2
-        lilR = r1
-
-    lilArr = lilR.getCoords()
-    bigArr = bigR.getCoords()
+    r2Arr = r2.getCoords()
+    r1Arr = r1.getCoords()
 
     # Compare widths and heights
-    if lilR.width > bigR.width:
-        if bigArr[0] in range(lilArr[0], lilArr[2] + 1) or bigArr[2] in range(lilArr[0], lilArr[2] + 1):
+    if r2.width > r1.width:
+        if r1Arr[0] in range(r2Arr[0], r2Arr[2] + 1) or r1Arr[2] in range(r2Arr[0], r2Arr[2] + 1):
             conditionW = True
-    elif lilArr[0] in range(bigArr[0], bigArr[2] + 1) or lilArr[2] in range(bigArr[0], bigArr[2] + 1):
+    elif r2Arr[0] in range(r1Arr[0], r1Arr[2] + 1) or r2Arr[2] in range(r1Arr[0], r1Arr[2] + 1):
         conditionW = True
             
-    if lilR.height > bigR.height:
-        if bigArr[1] in range(lilArr[1], lilArr[3] + 1) or bigArr[3] in range(lilArr[1], lilArr[3] + 1):
+    if r2.height > r1.height:
+        if r1Arr[1] in range(r2Arr[1], r2Arr[3] + 1) or r1Arr[3] in range(r2Arr[1], r2Arr[3] + 1):
             conditionH = True
-    elif lilArr[1] in range(bigArr[1], bigArr[3] + 1) or lilArr[3] in range(bigArr[1], bigArr[3] + 1):
+    elif r2Arr[1] in range(r1Arr[1], r1Arr[3] + 1) or r2Arr[3] in range(r1Arr[1], r1Arr[3] + 1):
         conditionH = True
 
     if conditionW and conditionH:
@@ -87,10 +80,7 @@ def collission(r1, r2):
     return "All safe for now."
 
 
-r = Rectangle(Point(10, 25), 10, 0)
-s = Rectangle(Point(10, 20), 10, 4)
-# print(r)
-# print(r.collission(Point(10, 25)))
-# print(r.contains(Point(10, 25)))
+r = Rectangle(Point(-23, 25), 100, 50)
+s = Rectangle(Point(10, 27), 10, 4)
 
 print(collission(r, s))
