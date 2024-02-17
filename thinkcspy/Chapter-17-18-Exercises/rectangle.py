@@ -6,6 +6,22 @@ class Rectangle:
         self.width = width
         self.height = height
 
+        self.lowerX = self.pos.getX()
+        self.upperX = self.lowerX + self.width
+        self.lowerY = self.pos.getY()
+        self.upperY = self.lowerY + self.height
+
+        if self.lowerX == self.upperX or self.lowerY == self.upperY:
+            return "Error: Rectangle not defined."
+
+        if self.lowerX > self.upperX:
+            self.lowerX = self.upperX
+            self.upperX = self.pos.getX()
+
+        if self.lowerY > self.upperY:
+            self.lowerY = self.upperY
+            self.upperY = self.pos.getY()
+
     def getWidth(self):
         return self.width
     
@@ -29,25 +45,10 @@ class Rectangle:
         return self
     
     def contains(self, pnt):
-        lowerX = self.pos.getX()
-        upperX = lowerX + self.width
-        lowerY = self.pos.getY()
-        upperY = lowerY + self.height
         pntX = pnt.getX()
         pntY = pnt.getY()
 
-        if lowerX == upperX or lowerY == upperY:
-            return "Error: Rectangle not defined."
-
-        if lowerX > upperX:
-            lowerX = upperX
-            upperX = self.pos.getX()
-
-        if lowerY > upperY:
-            lowerY = upperY
-            upperY = self.pos.getY()
-
-        if pntX > lowerX and pntX < upperX and pntY > lowerY and pntY < upperY:
+        if pntX > self.lowerX and pntX < self.upperX and pntY > self.lowerY and pntY < self.upperY:
             return True
 
         return False
@@ -55,8 +56,18 @@ class Rectangle:
     def diagonal(self):
         pnt = Point(self.width, self.height)
         return pnt.distanceFromOrigin()
+    
+    def collission(self, pnt):
+        pntX = pnt.getX()
+        pntY = pnt.getY()
+
+        if (pntX > self.lowerX and pntX < self.upperX) or (pntY > self.lowerY and pntY < self.upperY):
+            return True
+
+        return False
 
 r = Rectangle(Point(-10, 5), 4, 30)
 #print(r)
-print(r.diagonal())
+print(r.collission(Point(10, 25)))
+print(r.contains(Point(10, 25)))
     
