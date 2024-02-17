@@ -15,7 +15,21 @@ class Rectangle:
     def __str__(self):
         return "Lower Left Coordinates: {}; Width: {}; Height: {}".format(self.pos, self.width, self.height)
     
+    def area(self):
+        return self.width * self.height
+    
+    def perimeter(self):
+        return self.width * 2 + self.height * 2
 
-r = Rectangle(Point(4, 5), 6, 5)
+    def transpose(self):
+        width = self.width
+        self.width = self.height
+        self.height = width
+
+        return self
+
+
+r = Rectangle(Point(0, 0), 10, 5)
 print(r)
+print(r.transpose())
     
