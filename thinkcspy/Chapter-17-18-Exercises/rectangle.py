@@ -51,8 +51,12 @@ class Rectangle:
             return True
 
         return False
+    
+    def diagonal(self):
+        pnt = Point(self.width, self.height)
+        return pnt.distanceFromOrigin()
 
-r = Rectangle(Point(0, 0), 10, 5)
+r = Rectangle(Point(-10, 5), 4, 30)
 #print(r)
-print(r.contains(Point(-9, .0001)))
+print(r.diagonal())
     
