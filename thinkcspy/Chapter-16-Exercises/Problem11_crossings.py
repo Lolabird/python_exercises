@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 16
+# Problem 11
+
 def cross(rounds, bank1, boat, bank2):
     if bank1["Missionaries"] + bank1["Cannibals"] == 0 and boat["Missionaries"] + boat["Cannibals"] == 0:
         return "Journey complete"

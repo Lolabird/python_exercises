@@ -1,3 +1,6 @@
+# Runestone.Academy thinkcspy course
+# Chapter 16
+# Problems 9 and 10
 
 def fillJug(rounds, jugA, jugB, target):
     pour = 0

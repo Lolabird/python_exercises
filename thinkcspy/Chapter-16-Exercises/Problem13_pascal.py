@@ -1,4 +1,8 @@
-def createTriange(numRows):
+# Runestone.Academy thinkcspy course
+# Chapter 16
+# Problem 13
+
+def createTriangle(numRows):
     if numRows < 0:
         return
     else:     
@@ -36,6 +40,6 @@ def factorial(number):
         
 
 
-createTriange(10)
+createTriangle(10)
 
 

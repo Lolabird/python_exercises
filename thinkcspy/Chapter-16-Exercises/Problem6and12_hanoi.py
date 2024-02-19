@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 16
+# Problems 6 and 12
+
 import turtle
 import random
 
