@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 18
+# Problem 7 - 14
+
 from points import Point
 
 class Rectangle:

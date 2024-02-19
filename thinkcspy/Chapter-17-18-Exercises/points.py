@@ -1,3 +1,7 @@
+# Runestone.Academy thinkcspy course
+# Chapter 17
+# Problems 1 - 6
+
 import math
 
 class Point:
