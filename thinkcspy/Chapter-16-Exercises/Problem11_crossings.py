@@ -26,7 +26,7 @@ def cross(rounds, bank1, boat, bank2):
         print(rounds, bank1, boat, bank2)
         rounds += 1
 
-    cross(rounds, bank1, boat, bank2)
+    return cross(rounds, bank1, boat, bank2)
          
 
 def main():
