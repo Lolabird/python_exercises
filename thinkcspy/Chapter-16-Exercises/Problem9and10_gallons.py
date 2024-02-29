@@ -8,6 +8,9 @@ def fillJug(rounds, jugA, jugB, target):
     if target > jugA["cap"]:
         print("Target is too high. Reducing target to Jug A's capacity.")
         target = jugA["cap"]
+    
+    if target < 0:
+        return
 
     if jugA["state"] == target:
         print("Target reached")
@@ -37,7 +40,7 @@ def fillJug(rounds, jugA, jugB, target):
 def main():
     jugA = {"name": "Jug A", "state": 0, "cap": 4}
     jugB = {"name": "Jug B", "state": 0, "cap": 3}
-    target = 2
+    target = -5
 
     return fillJug(1, jugA, jugB, target)
 
