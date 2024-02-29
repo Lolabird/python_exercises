@@ -9,7 +9,7 @@ def createTriangle(numRows):
         for i in range(numRows+1):
             spaces = ("  "*(numRows-i)) 
             nums = f"{createRow(i)}"
-            print(spaces + nums + spaces)
+            print(spaces + nums)
 
 
 def createRow(currentRow):
