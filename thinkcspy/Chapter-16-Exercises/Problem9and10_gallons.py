@@ -23,7 +23,7 @@ def fillJug(rounds, jugA, jugB, target):
         jugB["state"] -= pour
         print(rounds, jugA, jugB)
 
-        if jugA["state"] == jugA["cap"]:
+        if jugA["state"] == jugA["cap"] and jugA["state"] != target:
             jugA["state"] = 0 #empty jugA if full
             print(rounds, jugA, jugB)
         
