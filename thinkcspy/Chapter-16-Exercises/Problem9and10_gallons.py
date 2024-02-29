@@ -5,6 +5,10 @@
 def fillJug(rounds, jugA, jugB, target):
     pour = 0
 
+    if target > jugA["cap"]:
+        print("Target is too high. Reducing target to Jug A's capacity.")
+        target = jugA["cap"]
+
     if jugA["state"] == target:
         print("Target reached")
         return 
