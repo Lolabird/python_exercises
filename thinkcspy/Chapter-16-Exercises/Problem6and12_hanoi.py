@@ -9,24 +9,19 @@ def stackTowers(num, turts):
     A = []
     B = []
     C = []
-    rounds = 0
     rods = {"A":A, "B":B, "C":C}
     
     for i in range(num):
         A.insert(0, i+1)
         
 
-    def hanoi(num, start, aux, end, turts):
-        nonlocal rounds  
-        
+    def hanoi(num, start, aux, end, turts):        
         if num == 1:
             end += [start.pop()]
-            rounds += 1
             moveTurtles(turts[end[-1] - 1], rods)
         else:
             hanoi(num - 1, start, end, aux, turts)
             end += [start.pop()]
-            rounds += 1
             moveTurtles(turts[end[-1] - 1], rods)
             hanoi(num -1, aux, start, end, turts)
    
@@ -53,8 +48,6 @@ def generateColor():
 
 def createTurtles(num):
     turtles = []
-
-    totalHeight = num*15
 
     for i in range(num):
         newTurt = turtle.Turtle()
