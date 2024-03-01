@@ -31,6 +31,9 @@ class Point:
         return (self.x, -self.y)
     
     def slopeFromOrigin(self):
+        if self.x == 0:
+            return None
+        
         return self.y / self.x
     
     def slopeIntercept(self, pnt):
@@ -79,3 +82,5 @@ class Point:
     def __str__(self):
         return "x=" + str(self.x) + ", y=" + str(self.y)
     
+p = Point(0, 5)
+print(p.slopeFromOrigin())
